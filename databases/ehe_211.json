@@ -1,4 +1,212 @@
-{
-  "course_name": "EHE_211_FIRST_LECTURES",
-  "questions": []
-}
+[
+  {
+    "id": 1,
+    "question": "What does EHE stand for in the context of health education?",
+    "options": ["Emergency Health Education", "Environmental Health Education", "Essential Health Education", "Effective Health Education"],
+    "correct": 0,
+    "explanation": "EHE stands for Emergency Health Education, which focuses on preparing individuals to respond to health emergencies and crises."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary goal of emergency health education?",
+    "options": ["To replace medical professionals", "To equip individuals with skills to respond effectively in critical health situations", "To eliminate all health emergencies", "To reduce hospital visits only"],
+    "correct": 1,
+    "explanation": "Emergency health education aims to equip individuals with essential skills and knowledge to respond effectively in critical health situations until professional help arrives."
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is a key component of emergency preparedness?",
+    "options": ["Ignoring potential risks", "Having an emergency action plan", "Waiting for emergencies to happen", "Avoiding training exercises"],
+    "correct": 1,
+    "explanation": "Having an emergency action plan is crucial for emergency preparedness, ensuring individuals know what to do when emergencies occur."
+  },
+  {
+    "id": 4,
+    "question": "What does CPR stand for?",
+    "options": ["Cardiac Pressure Response", "Cardiopulmonary Resuscitation", "Chest Pressure Relief", "Cardiac Pulse Recovery"],
+    "correct": 1,
+    "explanation": "CPR stands for Cardiopulmonary Resuscitation, a life-saving technique used when someone's breathing or heartbeat has stopped."
+  },
+  {
+    "id": 5,
+    "question": "In emergency response, what does the acronym ABC stand for?",
+    "options": ["Always Be Careful", "Airway, Breathing, Circulation", "Assess, Bandage, Call", "Alert, Breathe, Compress"],
+    "correct": 1,
+    "explanation": "ABC stands for Airway, Breathing, and Circulation - the three vital elements to check in emergency assessment."
+  },
+  {
+    "id": 6,
+    "question": "What is the recommended compression depth for adult CPR?",
+    "options": ["1 inch", "At least 2 inches", "3 inches", "4 inches"],
+    "correct": 1,
+    "explanation": "For adult CPR, chest compressions should be at least 2 inches (5 cm) deep to be effective in circulating blood."
+  },
+  {
+    "id": 7,
+    "question": "What is the compression-to-ventilation ratio for single-rescuer adult CPR?",
+    "options": ["15:2", "30:2", "20:1", "10:2"],
+    "correct": 1,
+    "explanation": "The recommended ratio for single-rescuer adult CPR is 30 chest compressions followed by 2 rescue breaths."
+  },
+  {
+    "id": 8,
+    "question": "What should be the first step when encountering an emergency situation?",
+    "options": ["Start treatment immediately", "Ensure scene safety", "Call family members", "Take photos"],
+    "correct": 1,
+    "explanation": "The first step in any emergency is to ensure scene safety for yourself, the victim, and bystanders before providing care."
+  },
+  {
+    "id": 9,
+    "question": "What does AED stand for?",
+    "options": ["Automatic Emergency Device", "Automated External Defibrillator", "Advanced Emergency Diagnosis", "Assisted Emergency Device"],
+    "correct": 1,
+    "explanation": "AED stands for Automated External Defibrillator, a portable device that checks heart rhythm and can send an electric shock to restore normal rhythm."
+  },
+  {
+    "id": 10,
+    "question": "When should you use an AED?",
+    "options": ["For any injury", "When someone is unconscious and not breathing normally", "For minor cuts", "For headaches"],
+    "correct": 1,
+    "explanation": "An AED should be used when someone is unconscious, not breathing normally, and showing no signs of circulation."
+  },
+  {
+    "id": 11,
+    "question": "What is the recovery position used for?",
+    "options": ["To help someone sleep", "To keep an unconscious breathing person's airway open", "To treat broken bones", "To stop bleeding"],
+    "correct": 1,
+    "explanation": "The recovery position is used to keep an unconscious but breathing person's airway open and prevent choking on vomit or fluids."
+  },
+  {
+    "id": 12,
+    "question": "What is the universal sign for choking?",
+    "options": ["Waving hands", "Clutching the throat with both hands", "Pointing to mouth", "Lying down"],
+    "correct": 1,
+    "explanation": "The universal sign for choking is clutching the throat with one or both hands, indicating inability to breathe or speak."
+  },
+  {
+    "id": 13,
+    "question": "What is the Heimlich maneuver used for?",
+    "options": ["Treating burns", "Dislodging an airway obstruction", "Stopping bleeding", "Treating shock"],
+    "correct": 1,
+    "explanation": "The Heimlich maneuver (abdominal thrusts) is used to dislodge an object blocking the airway in a choking victim."
+  },
+  {
+    "id": 14,
+    "question": "What are the three types of burns?",
+    "options": ["Hot, cold, and warm", "First-degree, second-degree, and third-degree", "Minor, moderate, and severe", "Red, white, and black"],
+    "correct": 1,
+    "explanation": "Burns are classified as first-degree (superficial), second-degree (partial thickness), and third-degree (full thickness) based on depth and severity."
+  },
+  {
+    "id": 15,
+    "question": "What is the first aid treatment for a minor burn?",
+    "options": ["Apply ice directly", "Cool with running water for at least 10 minutes", "Apply butter", "Leave it exposed to air"],
+    "correct": 1,
+    "explanation": "For minor burns, cool the area with running water for at least 10 minutes to reduce pain and prevent further tissue damage."
+  },
+  {
+    "id": 16,
+    "question": "What does RICE stand for in treating sprains and strains?",
+    "options": ["Run, Ice, Compress, Elevate", "Rest, Ice, Compression, Elevation", "Relax, Inspect, Cool, Exercise", "Remove, Ice, Cover, Examine"],
+    "correct": 1,
+    "explanation": "RICE stands for Rest, Ice, Compression, and Elevation - the standard first aid treatment for sprains and strains."
+  },
+  {
+    "id": 17,
+    "question": "What is shock in medical terms?",
+    "options": ["Being surprised", "A life-threatening condition where blood flow is inadequate", "An electric injury", "A psychological condition only"],
+    "correct": 1,
+    "explanation": "Medical shock is a life-threatening condition where the circulatory system fails to provide adequate blood flow to vital organs."
+  },
+  {
+    "id": 18,
+    "question": "What is the correct way to control severe bleeding?",
+    "options": ["Apply ice only", "Apply direct pressure with a clean cloth", "Elevate only", "Wait for help"],
+    "correct": 1,
+    "explanation": "The most effective way to control severe bleeding is to apply direct pressure to the wound with a clean cloth or bandage."
+  },
+  {
+    "id": 19,
+    "question": "What should you do if someone is having a seizure?",
+    "options": ["Restrain them", "Put something in their mouth", "Protect them from injury and time the seizure", "Give them water"],
+    "correct": 2,
+    "explanation": "During a seizure, protect the person from injury, time the seizure, and do not restrain them or put anything in their mouth."
+  },
+  {
+    "id": 20,
+    "question": "What are the signs of a heart attack?",
+    "options": ["Only chest pain", "Chest pain, shortness of breath, nausea, and sweating", "Only arm pain", "Only dizziness"],
+    "correct": 1,
+    "explanation": "Heart attack signs include chest pain or discomfort, shortness of breath, nausea, sweating, and pain radiating to arms, jaw, or back."
+  },
+  {
+    "id": 21,
+    "question": "What does FAST stand for in stroke recognition?",
+    "options": ["First Aid Stroke Treatment", "Face, Arms, Speech, Time", "Fast Action Saves Time", "Find, Assess, Stabilize, Transport"],
+    "correct": 1,
+    "explanation": "FAST stands for Face drooping, Arm weakness, Speech difficulty, and Time to call emergency services - key stroke warning signs."
+  },
+  {
+    "id": 22,
+    "question": "What is the purpose of triage in emergency situations?",
+    "options": ["To treat everyone equally", "To prioritize patients based on severity of condition", "To delay treatment", "To assign blame"],
+    "correct": 1,
+    "explanation": "Triage is the process of prioritizing patients based on the severity of their condition to ensure the most critical receive care first."
+  },
+  {
+    "id": 23,
+    "question": "What is anaphylaxis?",
+    "options": ["A mild allergic reaction", "A severe, life-threatening allergic reaction", "A type of infection", "A breathing exercise"],
+    "correct": 1,
+    "explanation": "Anaphylaxis is a severe, potentially life-threatening allergic reaction that requires immediate treatment with epinephrine."
+  },
+  {
+    "id": 24,
+    "question": "What is the treatment for anaphylaxis?",
+    "options": ["Antihistamines only", "Epinephrine auto-injector (EpiPen)", "Cold compress", "Rest"],
+    "correct": 1,
+    "explanation": "The primary treatment for anaphylaxis is immediate administration of epinephrine using an auto-injector (EpiPen), followed by emergency medical care."
+  },
+  {
+    "id": 25,
+    "question": "What is hypothermia?",
+    "options": ["High body temperature", "Dangerously low body temperature", "Normal body temperature", "Fever"],
+    "correct": 1,
+    "explanation": "Hypothermia occurs when the body loses heat faster than it can produce it, causing body temperature to drop to dangerously low levels."
+  },
+  {
+    "id": 26,
+    "question": "What is heat stroke?",
+    "options": ["Mild overheating", "A life-threatening condition where body temperature rises above 104°F", "Sunburn", "Dehydration only"],
+    "correct": 1,
+    "explanation": "Heat stroke is a life-threatening emergency where body temperature rises above 104°F (40°C), requiring immediate cooling and medical attention."
+  },
+  {
+    "id": 27,
+    "question": "What should you do for someone experiencing heat stroke?",
+    "options": ["Give them hot drinks", "Move to cool area and cool the body rapidly", "Make them exercise", "Give them salt tablets"],
+    "correct": 1,
+    "explanation": "For heat stroke, move the person to a cool area and cool their body rapidly using cool water, ice packs, or fans while calling for emergency help."
+  },
+  {
+    "id": 28,
+    "question": "What is the purpose of personal protective equipment (PPE) in emergency response?",
+    "options": ["To look professional", "To protect responders from infection and injury", "To intimidate victims", "To slow down response"],
+    "correct": 1,
+    "explanation": "PPE protects emergency responders from exposure to blood, bodily fluids, and infectious diseases while providing care."
+  },
+  {
+    "id": 29,
+    "question": "What is the Good Samaritan Law?",
+    "options": ["A law requiring everyone to help", "Legal protection for those providing emergency care in good faith", "A law against helping", "A religious law"],
+    "correct": 1,
+    "explanation": "Good Samaritan Laws provide legal protection to people who give reasonable assistance to those who are injured or in danger, encouraging bystander intervention."
+  },
+  {
+    "id": 30,
+    "question": "Why is continuing education important in emergency health care?",
+    "options": ["It's not important", "To stay current with best practices and maintain certification", "To waste time", "To avoid helping people"],
+    "correct": 1,
+    "explanation": "Continuing education ensures emergency responders stay current with the latest techniques, protocols, and best practices, and maintain their certifications."
+  }
+]
