@@ -3,96 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBT Exam</title>
+    <title>CBT Exam - Taiwo Study Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f1e;
+            color: #e4e4e7;
+            line-height: 1.6;
         }
+        
         .navbar {
-            background: #667eea;
-            color: white;
-            padding: 20px;
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .navbar a { color: white; text-decoration: none; }
+        
+        .back-btn {
+            color: #a1a1aa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .back-btn:hover { color: #6366f1; }
+        
         .timer {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: #6366f1;
         }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem 4rem;
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .exam-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fafafa;
+            margin-bottom: 0.5rem;
+        }
+        
+        .exam-header p {
+            color: #71717a;
+        }
+        
         .question-card {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+            background: rgba(24, 24, 37, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
         }
-        .question-text {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        .option {
-            padding: 12px;
-            margin: 8px 0;
-            border: 2px solid #e2e8f0;
+        
+        .question-number {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
             border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .question-text {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #fafafa;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .option {
+            position: relative;
+        }
+        
+        .option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .option label {
+            display: block;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
+            color: #d4d4d8;
         }
-        .option:hover {
-            background: #f7fafc;
-            border-color: #667eea;
+        
+        .option input[type="radio"]:checked + label {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: #6366f1;
+            color: #fafafa;
         }
-        .option input { margin-right: 10px; }
+        
+        .option label:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
         .submit-btn {
-            background: #48bb78;
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             color: white;
-            padding: 15px 40px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
+            border-radius: 12px;
+            font-size: 1.0625rem;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: bold;
+            transition: transform 0.2s;
+            margin-top: 2rem;
         }
-        .submit-btn:hover { background: #38a169; }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
         .results {
             display: none;
             text-align: center;
-            padding: 40px;
+            padding: 3rem 2rem;
         }
-        .score {
-            font-size: 3em;
-            color: #667eea;
-            font-weight: bold;
+        
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
         }
+        
+        .results h2 {
+            font-size: 2rem;
+            color: #fafafa;
+            margin-bottom: 1rem;
+        }
+        
+        .results p {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+        }
+        
+        .results-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
         .loading {
             text-align: center;
-            padding: 40px;
+            padding: 4rem 2rem;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(99, 102, 241, 0.1);
+            border-top-color: #6366f1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .question-card { padding: 1.5rem; }
+            .container { padding: 0 1rem 3rem; }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">← Back to Home</a>
-        <div class="timer" id="timer">Time: 00:00</div>
-    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="back-btn">← Exit Exam</a>
+            <div class="timer" id="timer">⏱ 00:00</div>
+        </div>
+    </nav>
 
     <div class="container">
-        <h1 id="courseTitle">Loading Exam...</h1>
+        <div class="exam-header">
+            <h1 id="courseTitle">Loading Exam...</h1>
+            <p>Answer all questions to the best of your ability</p>
+        </div>
         
         <div class="loading" id="loading">
-            <h2>Loading questions...</h2>
+            <div class="loading-spinner"></div>
+            <p style="color: #71717a;">Preparing your exam...</p>
         </div>
 
         <form id="examForm" style="display: none;">
@@ -101,11 +247,13 @@
         </form>
 
         <div class="results" id="results">
-            <h2>Exam Results</h2>
-            <div class="score" id="scoreDisplay"></div>
+            <div class="score-circle" id="scoreCircle"></div>
+            <h2>Exam Complete!</h2>
             <p id="percentageDisplay"></p>
-            <button onclick="location.reload()" class="submit-btn">Retake Exam</button>
-            <a href="index.html" class="submit-btn" style="display: inline-block; margin-left: 10px; text-decoration: none;">Home</a>
+            <div class="results-actions">
+                <button onclick="location.reload()" class="submit-btn" style="width: auto; padding: 1rem 2rem;">Retake Exam</button>
+                <a href="index.html" class="submit-btn" style="width: auto; padding: 1rem 2rem; text-decoration: none; display: inline-block;">Back to Courses</a>
+            </div>
         </div>
     </div>
 
@@ -115,30 +263,26 @@
         let questions = [];
         let startTime = Date.now();
 
-        document.getElementById('courseTitle').textContent = courseId.replace(/_/g, ' ').toUpperCase() + ' - CBT Exam';
+        document.getElementById('courseTitle').textContent = courseId.replace(/_/g, ' ').toUpperCase() + ' Exam';
 
-        // Timer
         setInterval(() => {
             const elapsed = Math.floor((Date.now() - startTime) / 1000);
             const mins = Math.floor(elapsed / 60);
             const secs = elapsed % 60;
             document.getElementById('timer').textContent = 
-                `Time: ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+                `⏱ ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
         }, 1000);
 
-        // Load questions from JSON
         fetch(`databases/${courseId}.json`)
             .then(res => res.json())
             .then(data => {
-                questions = data.questions;
-                // Randomize and select 20 questions
-                questions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
+                questions = data.questions.sort(() => Math.random() - 0.5).slice(0, 20);
                 displayQuestions();
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('examForm').style.display = 'block';
             })
             .catch(err => {
-                document.getElementById('loading').innerHTML = '<h2>Questions not available yet!</h2>';
+                document.getElementById('loading').innerHTML = '<p style="color: #71717a;">Questions not available yet!</p>';
             });
 
         function displayQuestions() {
@@ -147,13 +291,16 @@
                 const qDiv = document.createElement('div');
                 qDiv.className = 'question-card';
                 qDiv.innerHTML = `
-                    <div class="question-text">${index + 1}. ${q.question}</div>
-                    ${q.options.map((opt, i) => `
-                        <label class="option">
-                            <input type="radio" name="q${index}" value="${i}" required>
-                            ${opt}
-                        </label>
-                    `).join('')}
+                    <div class="question-number">Question ${index + 1}</div>
+                    <div class="question-text">${q.question}</div>
+                    <div class="options">
+                        ${q.options.map((opt, i) => `
+                            <div class="option">
+                                <input type="radio" id="q${index}_${i}" name="q${index}" value="${i}" required>
+                                <label for="q${index}_${i}">${opt}</label>
+                            </div>
+                        `).join('')}
+                    </div>
                 `;
                 container.appendChild(qDiv);
             });
@@ -170,21 +317,21 @@
                 }
             });
 
-            const percentage = (score / questions.length * 100).toFixed(2);
+            const percentage = (score / questions.length * 100).toFixed(1);
             
             document.getElementById('examForm').style.display = 'none';
             document.getElementById('results').style.display = 'block';
-            document.getElementById('scoreDisplay').textContent = `${score}/${questions.length}`;
+            document.getElementById('scoreCircle').textContent = `${percentage}%`;
             document.getElementById('percentageDisplay').textContent = 
-                `You scored ${percentage}% - ${getGrade(percentage)}`;
+                `You scored ${score} out of ${questions.length} - ${getGrade(percentage)}`;
         });
 
         function getGrade(percentage) {
-            if (percentage >= 90) return 'Excellent! 🌟';
-            if (percentage >= 80) return 'Very Good! 👏';
-            if (percentage >= 70) return 'Good! 👍';
-            if (percentage >= 60) return 'Fair 📚';
-            return 'Keep Studying! 💪';
+            if (percentage >= 90) return 'Outstanding Performance! 🌟';
+            if (percentage >= 80) return 'Excellent Work! 🎯';
+            if (percentage >= 70) return 'Good Job! 👍';
+            if (percentage >= 60) return 'Fair Performance 📚';
+            return 'Keep Practicing! 💪';
         }
     </script>
 </body>

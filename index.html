@@ -3,93 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taiwo's Study Hub</title>
+    <title>Taiwo Study Hub - Professional Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f1e;
+            color: #e4e4e7;
+            line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
         }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
+        
+        .navbar {
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .header h1 { font-size: 3em; margin-bottom: 10px; }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-stats {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.875rem;
+            color: #a1a1aa;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-number {
+            color: #6366f1;
+            font-weight: 600;
+        }
+        
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .courses-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fafafa;
+        }
+        
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 1.5rem;
         }
+        
         .course-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: rgba(24, 24, 37, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transform: scaleX(0);
             transition: transform 0.3s;
         }
-        .course-card:hover { transform: translateY(-5px); }
-        .course-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+        
+        .course-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.3);
+            background: rgba(24, 24, 37, 0.8);
         }
+        
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .course-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .course-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .course-info {
+            flex: 1;
+        }
+        
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fafafa;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #71717a;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .course-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 8px;
+            flex: 1;
+            padding: 0.875rem 1.5rem;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            text-align: center;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
         }
+        
         .btn-primary {
-            background: #667eea;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             color: white;
         }
-        .btn-primary:hover { background: #5568d3; }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        
         .btn-secondary {
-            background: #48bb78;
-            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .btn-secondary:hover { background: #38a169; }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .courses-grid { grid-template-columns: 1fr; }
+            .nav-stats { display: none; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📚 Taiwo's Study Hub</h1>
-            <p>Your Personal Learning & Exam Practice Platform</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Taiwo Study Hub</div>
+            <div class="nav-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span>Courses</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span>Questions</span>
+                </div>
+            </div>
         </div>
+    </nav>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Your Studies with Professional Practice</h1>
+            <p>Access comprehensive course materials and practice exams designed to help you excel in your academic journey.</p>
+        </div>
+    </section>
+
+    <section class="courses-section">
+        <div class="section-header">
+            <h2 class="section-title">Available Courses</h2>
+        </div>
         <div class="courses-grid" id="coursesGrid"></div>
-    </div>
+    </section>
 
     <script>
         const courses = [
-            { id: 'health_education', name: 'Health Education' },
-            { id: 'computer_applications', name: 'Computer Applications' },
-            { id: 'ehe_201', name: 'EHE 201 - Emergency Healthcare' },
-            { id: 'ehe_211', name: 'EHE 211' },
-            { id: 'emergency_healthcare', name: 'Emergency Healthcare' },
-            { id: 'mass_media_healthcare', name: 'Mass Media Healthcare' },
-            { id: 'healthy_lifestyle', name: 'Healthy Lifestyle (HED 203)' },
-            { id: 'edu_201', name: 'EDU 201' },
-            { id: 'reproductive_health', name: 'Reproductive Health' },
-            { id: 'ent_211', name: 'ENT 211' }
+            { id: 'health_education', name: 'Health Education', icon: '🏥', questions: 50 },
+            { id: 'computer_applications', name: 'Computer Applications', icon: '💻', questions: 50 },
+            { id: 'ehe_201', name: 'Emergency Healthcare', icon: '🚑', questions: 50 },
+            { id: 'ehe_211', name: 'EHE 211', icon: '⚕️', questions: 50 },
+            { id: 'emergency_healthcare', name: 'Emergency Care Education', icon: '🏥', questions: 50 },
+            { id: 'mass_media_healthcare', name: 'Mass Media Healthcare', icon: '📡', questions: 50 },
+            { id: 'healthy_lifestyle', name: 'Healthy Lifestyle', icon: '🌱', questions: 50 },
+            { id: 'edu_201', name: 'Education Fundamentals', icon: '📚', questions: 50 },
+            { id: 'reproductive_health', name: 'Reproductive Health', icon: '👶', questions: 50 },
+            { id: 'ent_211', name: 'Entrepreneurship', icon: '💼', questions: 50 }
         ];
 
         const grid = document.getElementById('coursesGrid');
         courses.forEach(course => {
             grid.innerHTML += `
                 <div class="course-card">
-                    <h3>${course.name}</h3>
-                    <a href="read.html?course=${course.id}" class="btn btn-primary">📖 Read Material</a>
-                    <a href="exam.html?course=${course.id}" class="btn btn-secondary">✍️ Take Exam</a>
+                    <div class="course-header">
+                        <div class="course-icon">${course.icon}</div>
+                        <div class="course-info">
+                            <h3 class="course-title">${course.name}</h3>
+                            <div class="course-meta">
+                                <span class="meta-item">${course.questions} Questions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="read.html?course=${course.id}" class="btn btn-secondary">Study Material</a>
+                        <a href="exam.html?course=${course.id}" class="btn btn-primary">Start Exam</a>
+                    </div>
                 </div>
             `;
         });
