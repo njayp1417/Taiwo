@@ -153,7 +153,6 @@
         
         .results {
             display: none;
-            text-align: center;
             padding: 2rem 1rem;
         }
         
@@ -175,12 +174,71 @@
             font-size: 1.75rem;
             color: #fafafa;
             margin-bottom: 0.75rem;
+            text-align: center;
         }
         
         .results p {
             font-size: 1.0625rem;
             color: #a1a1aa;
             margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .review-section {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        
+        .review-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fafafa;
+            margin-bottom: 1rem;
+        }
+        
+        .review-card {
+            background: rgba(24, 24, 37, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-card.correct {
+            border-left: 4px solid #10b981;
+        }
+        
+        .review-card.wrong {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .review-question {
+            font-weight: 500;
+            color: #fafafa;
+            margin-bottom: 0.75rem;
+        }
+        
+        .review-answer {
+            font-size: 0.9375rem;
+            margin: 0.5rem 0;
+        }
+        
+        .your-answer {
+            color: #ef4444;
+        }
+        
+        .correct-answer {
+            color: #10b981;
+        }
+        
+        .explanation {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: #d4d4d8;
+            line-height: 1.6;
         }
         
         .results-actions {
@@ -248,6 +306,11 @@
                 <button onclick="location.reload()" class="submit-btn" style="width: auto; padding: 1rem 2rem;">Retake</button>
                 <a href="index.html" class="submit-btn" style="width: auto; padding: 1rem 2rem; text-decoration: none; display: inline-block;">Home</a>
             </div>
+            
+            <div class="review-section">
+                <h3 class="review-title">Review Your Answers</h3>
+                <div id="reviewContainer"></div>
+            </div>
         </div>
     </div>
 
@@ -304,11 +367,23 @@
             e.preventDefault();
             
             let score = 0;
+            let results = [];
+            
             questions.forEach((q, index) => {
                 const selected = document.querySelector(`input[name="q${index}"]:checked`);
-                if (selected && parseInt(selected.value) === q.correct) {
-                    score++;
-                }
+                const userAnswer = selected ? parseInt(selected.value) : -1;
+                const isCorrect = userAnswer === q.correct;
+                
+                if (isCorrect) score++;
+                
+                results.push({
+                    question: q.question,
+                    userAnswer: userAnswer,
+                    correctAnswer: q.correct,
+                    options: q.options,
+                    isCorrect: isCorrect,
+                    explanation: q.explanation
+                });
             });
 
             const percentage = (score / questions.length * 100).toFixed(1);
@@ -319,8 +394,34 @@
             document.getElementById('percentageDisplay').textContent = 
                 `${score}/${questions.length} - ${getGrade(percentage)}`;
             
+            displayReview(results);
             window.scrollTo(0, 0);
         });
+        
+        function displayReview(results) {
+            const container = document.getElementById('reviewContainer');
+            results.forEach((result, index) => {
+                const card = document.createElement('div');
+                card.className = `review-card ${result.isCorrect ? 'correct' : 'wrong'}`;
+                
+                let answerHTML = '';
+                if (!result.isCorrect) {
+                    answerHTML = `
+                        <div class="review-answer your-answer">Your answer: ${result.userAnswer >= 0 ? result.options[result.userAnswer] : 'Not answered'}</div>
+                        <div class="review-answer correct-answer">Correct answer: ${result.options[result.correctAnswer]}</div>
+                    `;
+                } else {
+                    answerHTML = `<div class="review-answer correct-answer">✓ Correct: ${result.options[result.correctAnswer]}</div>`;
+                }
+                
+                card.innerHTML = `
+                    <div class="review-question">Q${index + 1}: ${result.question}</div>
+                    ${answerHTML}
+                    ${result.explanation ? `<div class="explanation"><strong>Explanation:</strong> ${result.explanation}</div>` : ''}
+                `;
+                container.appendChild(card);
+            });
+        }
 
         function getGrade(percentage) {
             if (percentage >= 90) return 'Outstanding';

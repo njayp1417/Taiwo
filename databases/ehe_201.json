@@ -1,71 +1,365 @@
 {
-  "course_name": "EHE_201_ABRIDGE",
+  "course_name": "EHE 201 - Emergency Healthcare Education",
   "questions": [
     {
       "id": 1,
-      "question": "What is Emergency health care?",
+      "question": "According to WHO, emergency health care is defined as:",
       "options": [
-        "the immediate medical assistance provided to individuals experiencing sudden or severe health condit",
-        "A type of software application",
-        "A research methodology",
-        "A theoretical framework"
+        "The immediate assessment and treatment provided to people with acute injuries or sudden illnesses",
+        "Only life-threatening conditions requiring hospital admission",
+        "Medical care provided within 24 hours of injury",
+        "Treatment given exclusively in emergency departments"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "WHO defines emergency health care as the immediate assessment and treatment for acute injuries or sudden illnesses, not limited to life-threatening conditions."
     },
     {
       "id": 2,
-      "question": "What is The core objectives of emergency healthcare education aim to equip healthcare professionals with the necessary knowledge, skills, and competencies to deliver prompt, effective, and compassionate care in critical situations. These objectives ensure that emergency healthcare providers?",
+      "question": "What is the primary goal of emergency health care?",
       "options": [
-        "well-prepared to manage acute medical conditions, respond efficiently during crises, and make inform",
-        "A type of software application",
-        "A research methodology",
-        "A theoretical framework"
+        "To provide long-term treatment plans",
+        "To stabilize the patient, alleviate suffering, and provide life-saving interventions",
+        "To diagnose chronic conditions",
+        "To refer patients to specialists"
       ],
-      "correct": 0
+      "correct": 1,
+      "explanation": "The primary goal is to stabilize patients, alleviate suffering, and provide life-saving interventions in critical situations."
     },
     {
       "id": 3,
-      "question": "Which of the following is correct regarding EHE_201_ABRIDGE?",
+      "question": "Which of the following is NOT a core objective of emergency healthcare education?",
       "options": [
-        "1. Role in Emergency Healthcare",
-        "None of the above",
-        "All of the above",
-        "Only in specific cases"
+        "Developing competence in life-saving techniques",
+        "Enhancing clinical decision-making skills",
+        "Providing routine health check-ups",
+        "Improving proficiency in triage and patient assessment"
       ],
-      "correct": 0
+      "correct": 2,
+      "explanation": "Routine health check-ups are not part of emergency healthcare education, which focuses on acute and critical care situations."
     },
     {
       "id": 4,
-      "question": "What is On-Site Decision Making: First responders?",
+      "question": "The ABCDE approach in emergency assessment stands for:",
       "options": [
-        "often the ones making crucial decisions on-site about transporting patients to appropriate healthcar",
-        "A type of software application",
-        "A research methodology",
-        "A theoretical framework"
+        "Assess, Breathe, Circulate, Diagnose, Evaluate",
+        "Airway, Breathing, Circulation, Disability, Exposure",
+        "Alert, Blood pressure, Cardiac, Drugs, Emergency",
+        "Ambulance, Basic care, CPR, Defibrillation, Evacuation"
       ],
-      "correct": 0
+      "correct": 1,
+      "explanation": "ABCDE stands for Airway, Breathing, Circulation, Disability, and Exposure - a systematic approach to patient assessment."
     },
     {
       "id": 5,
-      "question": "What is A comprehensive emergency healthcare education program covers various essential topics, including first aid, cardiopulmonary resuscitation (CPR), wound management, and trauma care. Training may differ depending on the audience, but foundational skills?",
+      "question": "According to Razzak and Kellermann (2002), a well-functioning emergency care system can:",
       "options": [
-        "common across all levels. Emergency healthcare education",
-        "A type of software application",
-        "A research methodology",
-        "A theoretical framework"
+        "Eliminate all preventable deaths",
+        "Reduce mortality rates significantly, especially in trauma and cardiovascular events",
+        "Replace the need for primary healthcare",
+        "Cure chronic diseases"
       ],
-      "correct": 0
+      "correct": 1,
+      "explanation": "Research shows that effective emergency care systems significantly reduce mortality rates, particularly in trauma, cardiovascular events, and respiratory distress."
     },
     {
       "id": 6,
-      "question": "According to the course material, which statement is true?",
+      "question": "Which certification is essential for advanced cardiac life support?",
       "options": [
-        "OOU – EHE 201: EMERGENCY HEALTH CARE EDUCATION\nOBJECTIVES OF THE COURSE:\nAt the end of this course, Students should be able to;\nDescribe and Define em",
-        "This is not covered in the course",
-        "The opposite is true",
-        "This only applies in rare cases"
+        "BLS (Basic Life Support)",
+        "ACLS (Advanced Cardiac Life Support)",
+        "PHTLS (Prehospital Trauma Life Support)",
+        "EMT (Emergency Medical Technician)"
       ],
-      "correct": 0
+      "correct": 1,
+      "explanation": "ACLS (Advanced Cardiac Life Support) is the specific certification for managing cardiovascular emergencies with advanced interventions."
+    },
+    {
+      "id": 7,
+      "question": "Triage in emergency healthcare refers to:",
+      "options": [
+        "Treating all patients equally regardless of condition",
+        "Assessing and prioritizing patients based on severity of condition",
+        "Sending patients to different hospitals",
+        "Documenting patient information"
+      ],
+      "correct": 1,
+      "explanation": "Triage is the process of assessing and categorizing patients based on the severity of their condition to ensure critical cases receive immediate attention."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is a key component of Basic Life Support (BLS)?",
+      "options": [
+        "Surgical procedures",
+        "CPR and AED use",
+        "Prescription of medications",
+        "X-ray interpretation"
+      ],
+      "correct": 1,
+      "explanation": "BLS includes CPR (cardiopulmonary resuscitation) and AED (automated external defibrillator) use as fundamental life-saving skills."
+    },
+    {
+      "id": 9,
+      "question": "PALS certification is specifically designed for:",
+      "options": [
+        "Adult cardiac emergencies",
+        "Pediatric emergencies focusing on respiratory and cardiac complications",
+        "Trauma management in adults",
+        "Mental health crises"
+      ],
+      "correct": 1,
+      "explanation": "PALS (Pediatric Advanced Life Support) is specialized training for managing pediatric emergencies, particularly respiratory and cardiac issues in children."
+    },
+    {
+      "id": 10,
+      "question": "According to the course, which population is particularly vulnerable in emergency situations due to physiological differences?",
+      "options": [
+        "Young adults",
+        "Middle-aged individuals",
+        "Children and adolescents",
+        "Healthcare workers"
+      ],
+      "correct": 2,
+      "explanation": "Children are particularly vulnerable due to physiological differences that affect their responses to trauma, illness, and treatments."
+    },
+    {
+      "id": 11,
+      "question": "The Incident Command System (ICS) is primarily used for:",
+      "options": [
+        "Individual patient care",
+        "Hospital administration",
+        "Organized large-scale emergency responses and disaster management",
+        "Medical billing"
+      ],
+      "correct": 2,
+      "explanation": "ICS is a standardized framework for organizing and coordinating large-scale emergency responses and disaster management operations."
+    },
+    {
+      "id": 12,
+      "question": "What is the primary role of first responders in emergency healthcare?",
+      "options": [
+        "Providing long-term care",
+        "Initial assessment, triage, and stabilization of patients",
+        "Performing complex surgeries",
+        "Managing hospital administration"
+      ],
+      "correct": 1,
+      "explanation": "First responders conduct initial assessments, perform triage, and stabilize patients before transport to medical facilities."
+    },
+    {
+      "id": 13,
+      "question": "Which of the following is NOT mentioned as a challenge faced by emergency healthcare professionals?",
+      "options": [
+        "High-stress environment",
+        "Risk of physical injury",
+        "Limited career advancement",
+        "Exposure to infectious diseases"
+      ],
+      "correct": 2,
+      "explanation": "The course mentions high-stress environments, physical injury risks, and disease exposure as challenges, but not limited career advancement."
+    },
+    {
+      "id": 14,
+      "question": "Psychological first aid in emergency settings includes:",
+      "options": [
+        "Prescribing psychiatric medications",
+        "Providing emotional support and connecting patients with mental health resources",
+        "Conducting psychotherapy sessions",
+        "Diagnosing mental disorders"
+      ],
+      "correct": 1,
+      "explanation": "Psychological first aid involves offering emotional support, identifying distress signs, and connecting patients with appropriate mental health resources."
+    },
+    {
+      "id": 15,
+      "question": "According to Carr et al. (2010), emergency departments serve as:",
+      "options": [
+        "Primary care clinics",
+        "Safety nets for underserved communities",
+        "Specialty consultation centers",
+        "Rehabilitation facilities"
+      ],
+      "correct": 1,
+      "explanation": "Emergency departments function as safety nets for underserved communities, providing immediate care regardless of ability to pay."
+    },
+    {
+      "id": 16,
+      "question": "Mass Casualty Incident (MCI) training covers:",
+      "options": [
+        "Individual patient care only",
+        "Resource allocation, patient flow, field triage, and multi-agency coordination",
+        "Hospital construction",
+        "Medical research"
+      ],
+      "correct": 1,
+      "explanation": "MCI training encompasses resource allocation, patient flow management, field triage, and coordination with multiple agencies during large-scale emergencies."
+    },
+    {
+      "id": 17,
+      "question": "The primary purpose of using tourniquets in emergency care is to:",
+      "options": [
+        "Measure blood pressure",
+        "Control severe bleeding",
+        "Immobilize fractures",
+        "Administer medications"
+      ],
+      "correct": 1,
+      "explanation": "Tourniquets are used to control severe bleeding by applying pressure to stop blood flow in traumatic injuries."
+    },
+    {
+      "id": 18,
+      "question": "Cultural competence in emergency healthcare is important because:",
+      "options": [
+        "It is required by law",
+        "It improves patient trust, cooperation, and ensures respectful, equitable care",
+        "It reduces paperwork",
+        "It speeds up treatment"
+      ],
+      "correct": 1,
+      "explanation": "Cultural competence improves patient trust and cooperation while ensuring all patients receive respectful and equitable care regardless of background."
+    },
+    {
+      "id": 19,
+      "question": "Which of the following best describes trauma-informed care?",
+      "options": [
+        "Care focused only on physical injuries",
+        "Sensitivity to the emotional state of trauma victims to reduce stress and anxiety",
+        "Treatment provided only by trauma surgeons",
+        "Care given in trauma centers exclusively"
+      ],
+      "correct": 1,
+      "explanation": "Trauma-informed care emphasizes sensitivity to patients' emotional states, promoting approaches that reduce stress and anxiety in trauma victims."
+    },
+    {
+      "id": 20,
+      "question": "According to the course, continuous education in emergency medicine is important because:",
+      "options": [
+        "It is required for salary increases",
+        "The field constantly evolves with new protocols, technologies, and treatments",
+        "It reduces work hours",
+        "It eliminates the need for certification"
+      ],
+      "correct": 1,
+      "explanation": "Emergency medicine constantly evolves, requiring ongoing education to stay current with new protocols, technologies, and treatment methods."
+    },
+    {
+      "id": 21,
+      "question": "The role of Electronic Health Records (EHR) in emergency care includes:",
+      "options": [
+        "Replacing physical examinations",
+        "Facilitating rapid information sharing and documentation",
+        "Eliminating the need for patient consent",
+        "Reducing the number of healthcare providers needed"
+      ],
+      "correct": 1,
+      "explanation": "EHRs facilitate rapid information sharing, efficient documentation, and access to critical patient data in emergency settings."
+    },
+    {
+      "id": 22,
+      "question": "Decontamination procedures in HAZMAT training are essential for:",
+      "options": [
+        "Routine cleaning",
+        "Managing chemical, biological, or radiological exposures",
+        "Sterilizing surgical equipment",
+        "Disinfecting ambulances"
+      ],
+      "correct": 1,
+      "explanation": "Decontamination procedures are critical for managing incidents involving hazardous materials, including chemical, biological, or radiological exposures."
+    },
+    {
+      "id": 23,
+      "question": "Which statement about emergency healthcare for pregnant women is correct?",
+      "options": [
+        "They receive the same care as non-pregnant patients",
+        "Emergency care requires specialized knowledge to ensure safety of both mother and fetus",
+        "They are not priority patients",
+        "Only obstetricians can treat them"
+      ],
+      "correct": 1,
+      "explanation": "Pregnant women require specialized emergency care that considers the safety and needs of both mother and fetus."
+    },
+    {
+      "id": 24,
+      "question": "The primary benefit of simulation training in emergency healthcare education is:",
+      "options": [
+        "It replaces real-world experience",
+        "It allows practice in realistic scenarios to refine skills without patient risk",
+        "It is cheaper than classroom learning",
+        "It eliminates the need for certification"
+      ],
+      "correct": 1,
+      "explanation": "Simulation training provides realistic practice scenarios where responders can refine their skills without risking patient safety."
+    },
+    {
+      "id": 25,
+      "question": "According to Burkle and Greenough (2008), emergency departments are integral to:",
+      "options": [
+        "Routine health screenings",
+        "Responding to mass casualty events, pandemics, and natural disasters",
+        "Providing elective surgeries",
+        "Managing chronic disease follow-ups"
+      ],
+      "correct": 1,
+      "explanation": "Emergency departments play a crucial role in responding to mass casualty events, pandemics, and natural disasters through rapid resource mobilization."
+    },
+    {
+      "id": 26,
+      "question": "Infection control in emergency settings is critical because:",
+      "options": [
+        "It improves patient satisfaction",
+        "Emergency departments frequently encounter infectious diseases requiring prevention of transmission",
+        "It reduces costs",
+        "It speeds up patient discharge"
+      ],
+      "correct": 1,
+      "explanation": "Emergency departments frequently encounter infectious diseases, making infection control essential to prevent disease transmission and maintain safety."
+    },
+    {
+      "id": 27,
+      "question": "The scope of practice for emergency healthcare professionals refers to:",
+      "options": [
+        "The geographical area they can work in",
+        "The legal boundaries and procedures they are authorized to perform",
+        "Their work schedule",
+        "Their salary range"
+      ],
+      "correct": 1,
+      "explanation": "Scope of practice defines the legal boundaries and specific procedures that healthcare professionals are authorized to perform."
+    },
+    {
+      "id": 28,
+      "question": "Which of the following is a key strategy to support emergency healthcare professionals?",
+      "options": [
+        "Increasing work hours",
+        "Providing mental health support programs and resilience training",
+        "Reducing training requirements",
+        "Eliminating continuing education"
+      ],
+      "correct": 1,
+      "explanation": "Mental health support programs and resilience training are essential strategies to help emergency professionals manage stress and prevent burnout."
+    },
+    {
+      "id": 29,
+      "question": "Community outreach and public health initiatives by emergency responders include:",
+      "options": [
+        "Only responding to emergencies",
+        "Educating the community on CPR, first aid, and disease prevention",
+        "Performing elective procedures",
+        "Managing hospital finances"
+      ],
+      "correct": 1,
+      "explanation": "Emergency responders engage in community education on CPR, first aid, and prevention, enhancing community resilience and preparedness."
+    },
+    {
+      "id": 30,
+      "question": "The Institute of Medicine (IOM) describes emergency health care as:",
+      "options": [
+        "Only hospital-based services",
+        "An integrated system of EMS, hospital emergency care, trauma services, and urgent care",
+        "Services provided only by doctors",
+        "Care given within the first hour of injury"
+      ],
+      "correct": 1,
+      "explanation": "IOM describes emergency healthcare as an integrated system encompassing EMS, hospital emergency care, trauma services, and urgent care aimed at reducing morbidity and mortality."
     }
   ]
 }
