@@ -1,0 +1,49 @@
+{
+  "course_name": "COMPUTER_APPLICATIONS_IN_HUMAN_KINETICS_AND_HEALTH_EDUCATION072732",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Computer application?",
+      "options": [
+        "the use of computer systems, software, and information technology to perform specific tasks, process",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 2,
+      "question": "What is Despite the numerous benefits, the use of computer applications in Human Kinetics and Health Education faces several challenges. One major challenge?",
+      "options": [
+        "the high cost of equipment and software, which may make it difficult for institutions and individual",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 3,
+      "question": "What is Another challenge?",
+      "options": [
+        "the limited technical skills and training of personnel. Teachers, coaches, and health professionals ",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 4,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "COMPUTER APPLICATIONS IN HUMAN KINETICS AND HEALTH EDUCATION\nINTRODUCTION\nComputer applications have become an integral part of Human Kinetics and Hea",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}

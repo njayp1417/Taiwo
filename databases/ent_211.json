@@ -1,0 +1,16 @@
+{
+  "course_name": "SUMMARY_NOTE_ON_ENT211",
+  "questions": [
+    {
+      "id": 1,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "SUMMARIZEDANDCOMPILEDBYHONEYSUMMARYNOTEONENT211-ENTREPRENEURSHIPAND\nINNOVATION\nEntrepreneurshipistheabilitytotakefinancialriskstostartandmanageabusine",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "course_name": "EHE_201_ABRIDGE",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Emergency health care?",
+      "options": [
+        "the immediate medical assistance provided to individuals experiencing sudden or severe health condit",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 2,
+      "question": "What is The core objectives of emergency healthcare education aim to equip healthcare professionals with the necessary knowledge, skills, and competencies to deliver prompt, effective, and compassionate care in critical situations. These objectives ensure that emergency healthcare providers?",
+      "options": [
+        "well-prepared to manage acute medical conditions, respond efficiently during crises, and make inform",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is correct regarding EHE_201_ABRIDGE?",
+      "options": [
+        "1. Role in Emergency Healthcare",
+        "None of the above",
+        "All of the above",
+        "Only in specific cases"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 4,
+      "question": "What is On-Site Decision Making: First responders?",
+      "options": [
+        "often the ones making crucial decisions on-site about transporting patients to appropriate healthcar",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 5,
+      "question": "What is A comprehensive emergency healthcare education program covers various essential topics, including first aid, cardiopulmonary resuscitation (CPR), wound management, and trauma care. Training may differ depending on the audience, but foundational skills?",
+      "options": [
+        "common across all levels. Emergency healthcare education",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 6,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "OOU – EHE 201: EMERGENCY HEALTH CARE EDUCATION\nOBJECTIVES OF THE COURSE:\nAt the end of this course, Students should be able to;\nDescribe and Define em",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwo's Study Hub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        .header h1 { font-size: 3em; margin-bottom: 10px; }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .course-card:hover { transform: translateY(-5px); }
+        .course-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover { background: #5568d3; }
+        .btn-secondary {
+            background: #48bb78;
+            color: white;
+        }
+        .btn-secondary:hover { background: #38a169; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Taiwo's Study Hub</h1>
+            <p>Your Personal Learning & Exam Practice Platform</p>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid"></div>
+    </div>
+
+    <script>
+        const courses = [
+            { id: 'health_education', name: 'Health Education' },
+            { id: 'computer_applications', name: 'Computer Applications' },
+            { id: 'ehe_201', name: 'EHE 201 - Emergency Healthcare' },
+            { id: 'ehe_211', name: 'EHE 211' },
+            { id: 'emergency_healthcare', name: 'Emergency Healthcare' },
+            { id: 'mass_media_healthcare', name: 'Mass Media Healthcare' },
+            { id: 'healthy_lifestyle', name: 'Healthy Lifestyle (HED 203)' },
+            { id: 'edu_201', name: 'EDU 201' },
+            { id: 'reproductive_health', name: 'Reproductive Health' },
+            { id: 'ent_211', name: 'ENT 211' }
+        ];
+
+        const grid = document.getElementById('coursesGrid');
+        courses.forEach(course => {
+            grid.innerHTML += `
+                <div class="course-card">
+                    <h3>${course.name}</h3>
+                    <a href="read.html?course=${course.id}" class="btn btn-primary">📖 Read Material</a>
+                    <a href="exam.html?course=${course.id}" class="btn btn-secondary">✍️ Take Exam</a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

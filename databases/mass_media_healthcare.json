@@ -1,0 +1,27 @@
+{
+  "course_name": "Mass_Media_Healthcare_Education_2E",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Definition:  Health communication?",
+      "options": [
+        "the study and practice of communicating promotional health information, such as in public health cam",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 2,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "Mass Media Healthcare Education 2E\nIntroduction to Health Communication\nLearning Objectives\nBy the end of this week, students will be able to:\nDefine ",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}

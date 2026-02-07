@@ -1,0 +1,68 @@
+Mass Media Healthcare Education 2E
+Introduction to Health Communication
+Learning Objectives
+By the end of this week, students will be able to:
+Define health communication and explain its significance in health education and promotion
+Identify the key components of the communication process
+Describe at least three theoretical frameworks used in health communication
+Analyse how mass media have influenced healthcare education historically
+1.1 What is Health Communication?
+Definition:  Health communication is the study and practice of communicating promotional health information, such as in public health campaigns, health education, and between doctor and patient. Health communications is a field that focuses on how information is shared to influence people's health behaviours, decisions, and outcomes. It involves using various strategies and channels, like media, messaging, and interpersonal communication, to promote health, prevent disease, and support healthcare services. The goal is to effectively engage audiences, improve health literacy, and drive positive change. Health communication is the study and practice of communicating promotional health information, such as in public health campaigns, health education, and between doctor and patient.
+Key Concepts:
+Interpersonal vs. mass communication in healthcare
+One-way vs. two-way communication models
+The role of health communication in disease prevention and health promotion
+Health communication as a multidisciplinary field
+Discussion Points:
+Why is effective communication crucial in healthcare?
+How does poor communication impact health outcomes?
+Examples of health communication in daily life
+1.2 Historical Evolution of Mass Media in Healthcare
+Timeline Overview:
+1900s-1940s: Print media and early public health posters (TB, hygiene campaigns)
+1950s-1970s: Radio and television health programming emergence
+1980s-1990s: Cable TV health channels, HIV/AIDS awareness campaigns
+2000s-2010s: Internet, websites, and early social media health information
+2010s-Present: Mobile health apps, social media influencers, telehealth
+Case Examples:
+Polio vaccination campaigns with March of Dimes
+Anti-smoking "Truth" campaign evolution
+COVID-19 information dissemination across platforms
+1.3 The Communication Process Model
+Components:
+Source/Sender: Who creates the message (e.g., CDC, WHO, healthcare provider)
+Message: The health information being communicated
+Channel: Medium through which message travels (TV, social media, etc.)
+Receiver/Audience: The target population
+Feedback: Response from audience (behaviour change, engagement)
+Noise: Barriers to effective communication (misinformation, language, literacy)
+Application Exercise: Map a recent health campaign (e.g., flu vaccination) through this model
+1.4 Theoretical Frameworks
+A. Health Belief Model (HBM)
+Core Concepts:
+Perceived susceptibility: "Am I at risk?"
+Perceived severity: "How serious is this condition?"
+Perceived benefits: "Will this action help me?"
+Perceived barriers: "What obstacles prevent action?"
+Cues to action: Triggers that prompt behaviour
+Self-efficacy: Confidence in ability to take action
+Application: Designing messages that address each component
+Example: Mammography screening campaigns targeting women 40+
+B. Social Cognitive Theory (SCT)
+Core Concepts:
+Reciprocal determinism: Person, behaviour, and environment interact
+Observational learning: Learning by watching others
+Behavioural capability: Knowledge and skills to perform behaviour
+Outcome expectations: Anticipated results of behaviour
+Self-efficacy: Confidence in performing behaviour
+Application: Using role models and testimonials in campaigns
+Example: Anti-smoking campaigns featuring former smokers
+C. Transtheoretical Model (Stages of Change)
+Stages:
+Precontemplation: Not ready to change
+Contemplation: Thinking about change
+Preparation: Getting ready to change
+Action: Actively changing behaviour
+Maintenance: Sustaining behaviour change
+Application: Tailoring messages to audience's readiness stage
+Example: Different messages for people who never exercised vs. those who exercise occasionally

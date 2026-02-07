@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course_name }} - CBT Exam</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .timer {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .question-card {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+        }
+        .question-text {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .option {
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover {
+            background: #f7fafc;
+            border-color: #667eea;
+        }
+        .option input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background: #48bb78;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background: #38a169;
+        }
+        .results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+        .score {
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">← Back to Home</a>
+        <div class="timer" id="timer">Time: 00:00</div>
+    </div>
+
+    <div class="container">
+        <h1>{{ course_name.replace('_', ' ').title() }} - CBT Exam</h1>
+        
+        <div class="loading" id="loading">
+            <h2>Loading questions...</h2>
+        </div>
+
+        <form id="examForm" style="display: none;">
+            <div id="questionsContainer"></div>
+            <button type="submit" class="submit-btn">Submit Exam</button>
+        </form>
+
+        <div class="results" id="results">
+            <h2>Exam Results</h2>
+            <div class="score" id="scoreDisplay"></div>
+            <p id="percentageDisplay"></p>
+            <button onclick="location.reload()" class="submit-btn">Retake Exam</button>
+            <a href="/" class="submit-btn" style="display: inline-block; margin-left: 10px; text-decoration: none;">Home</a>
+        </div>
+    </div>
+
+    <script>
+        const courseName = '{{ course_name }}';
+        let questions = [];
+        let startTime = Date.now();
+
+        // Update timer
+        setInterval(() => {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const mins = Math.floor(elapsed / 60);
+            const secs = elapsed % 60;
+            document.getElementById('timer').textContent = 
+                `Time: ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }, 1000);
+
+        // Load questions
+        fetch(`/api/get_questions/${courseName}?num=20`)
+            .then(res => res.json())
+            .then(data => {
+                questions = data.questions;
+                displayQuestions();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('examForm').style.display = 'block';
+            });
+
+        function displayQuestions() {
+            const container = document.getElementById('questionsContainer');
+            questions.forEach((q, index) => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'question-card';
+                qDiv.innerHTML = `
+                    <div class="question-text">${index + 1}. ${q.question}</div>
+                    ${q.options.map((opt, i) => `
+                        <label class="option">
+                            <input type="radio" name="q${q.id}" value="${i}" required>
+                            ${opt}
+                        </label>
+                    `).join('')}
+                `;
+                container.appendChild(qDiv);
+            });
+        }
+
+        document.getElementById('examForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const answers = questions.map(q => ({
+                question_id: q.id,
+                answer: parseInt(document.querySelector(`input[name="q${q.id}"]:checked`).value)
+            }));
+
+            const response = await fetch('/api/submit_exam', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ course_name: courseName, answers })
+            });
+
+            const result = await response.json();
+            
+            document.getElementById('examForm').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('scoreDisplay').textContent = `${result.score}/${result.total}`;
+            document.getElementById('percentageDisplay').textContent = 
+                `You scored ${result.percentage}% - ${getGrade(result.percentage)}`;
+        });
+
+        function getGrade(percentage) {
+            if (percentage >= 90) return 'Excellent! 🌟';
+            if (percentage >= 80) return 'Very Good! 👏';
+            if (percentage >= 70) return 'Good! 👍';
+            if (percentage >= 60) return 'Fair 📚';
+            return 'Keep Studying! 💪';
+        }
+    </script>
+</body>
+</html>

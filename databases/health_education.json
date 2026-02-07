@@ -1,0 +1,49 @@
+{
+  "course_name": "CCMAS_HANDBOOK_HEALTH_EDUCATIONokueso_3",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is department?",
+      "options": [
+        "therefor e aimed at enhancing the health and the physical well -being of the general",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is correct regarding CCMAS_HANDBOOK_HEALTH_EDUCATIONokueso_3?",
+      "options": [
+        "1. Dr. S amuel  A.",
+        "None of the above",
+        "All of the above",
+        "Only in specific cases"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 3,
+      "question": "What is 3. Courses shall be evaluated in terms of course units. A course unit?",
+      "options": [
+        "defined as one lecture/",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 4,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "OLABISI ONABANJO UNIVERSITY AGO -IWOYE  \nFACULTY  OF EDUCATION  \nDEPARTMENT OF HUMAN KINETICS AND \nHEALTH EDUCATION  \n \n \n \n \n \n \n \n \nDEPARTMENTAL UND",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}

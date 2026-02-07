@@ -1,0 +1,60 @@
+{
+  "course_name": "OOU_EDU_201__FACULTY_OFFICIAL",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is correct regarding OOU_EDU_201__FACULTY_OFFICIAL?",
+      "options": [
+        "1. Program of activities",
+        "None of the above",
+        "All of the above",
+        "Only in specific cases"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 2,
+      "question": "What is ❖ Daniel & Laurel Tanner 1988, defined that curriculum?",
+      "options": [
+        "the reconstruction of knowledge",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 3,
+      "question": "What is 2. Curriculum Content s: This?",
+      "options": [
+        "the subject matter. What you want to teach. It is",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 4,
+      "question": "What is A teaching skill?",
+      "options": [
+        "the behavior of a teacher, which facilitates the students learning both directly",
+        "A type of software application",
+        "A research methodology",
+        "A theoretical framework"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 5,
+      "question": "According to the course material, which statement is true?",
+      "options": [
+        "COURSE CODE: OOU – EDU 201  \nCOURSE TITLE: CURRICULUM AND TEACHING METHODS",
+        "This is not covered in the course",
+        "The opposite is true",
+        "This only applies in rare cases"
+      ],
+      "correct": 0
+    }
+  ]
+}
